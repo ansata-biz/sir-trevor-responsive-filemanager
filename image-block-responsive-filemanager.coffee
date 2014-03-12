@@ -6,7 +6,7 @@ SirTrevor.DEFAULTS.Block.upload_options.html = [
   '</div>'].join '\n'
 
 SirTrevor.DEFAULTS.Block.upload_options.filemanager =
-  base_url: 'filemanager/dialog.php'
+  base_url: '/filemanager/dialog.php'
   width: '70%'
   height: '70%'
   maxWidth: 1000

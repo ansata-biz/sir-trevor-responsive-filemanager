@@ -5,7 +5,7 @@
   SirTrevor.DEFAULTS.Block.upload_options.html = ['<div class="st-block__upload-container">', '<input class="st-upload-filename" type="hidden"/>', '<button class="st-upload-btn" type="button"><%= i18n.t("general:upload") %></button>', '</div>'].join('\n');
 
   SirTrevor.DEFAULTS.Block.upload_options.filemanager = {
-    base_url: 'filemanager/dialog.php',
+    base_url: '/filemanager/dialog.php',
     width: '70%',
     height: '70%',
     maxWidth: 1000,
