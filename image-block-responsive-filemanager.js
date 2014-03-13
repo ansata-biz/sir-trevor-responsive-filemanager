@@ -53,7 +53,7 @@
         })).show();
         return _this.setData({
           file: {
-            url: e.target.value
+            url: e.target.value.replace(/^.*\/\/[^\/]+/, '')
           }
         });
       }

@@ -44,5 +44,5 @@ SirTrevor.Blocks.Image.prototype.onBlockRender = ->
     if (e.target.value)
       this.$editor.html($('<img>', src: e.target.value )).show()
       this.setData {
-        file: { url: e.target.value }
+        file: { url: e.target.value.replace(/^.*\/\/[^\/]+/, '') } # cut protocol and host
       }
