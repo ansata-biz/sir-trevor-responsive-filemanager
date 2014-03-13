@@ -34,6 +34,11 @@ SirTrevor.BlockMixins.Uploadable.initializeUploadable = ->
     $.fancybox config
 
 
+# disable "drop file here" functionality
+SirTrevor.Blocks.Image.prototype.droppable = false
+# skip "...or "
+SirTrevor.Locales.en.general.upload = 'choose a file'
+
 SirTrevor.Blocks.Image.prototype.onBlockRender = ->
   this.$inputs.find('input').on 'change', (e) =>
     if (e.target.value)

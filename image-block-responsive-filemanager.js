@@ -40,6 +40,10 @@
     });
   };
 
+  SirTrevor.Blocks.Image.prototype.droppable = false;
+
+  SirTrevor.Locales.en.general.upload = 'choose a file';
+
   SirTrevor.Blocks.Image.prototype.onBlockRender = function() {
     var _this = this;
     return this.$inputs.find('input').on('change', function(e) {
