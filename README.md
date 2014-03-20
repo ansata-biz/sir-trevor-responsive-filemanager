@@ -11,6 +11,12 @@ Note: This plugin designed to work with modified forked version of SirTrevor: ht
 Installation
 ------------
 
+You can use [Components](https://github.com/component/component) to install this plugin:
+
+~~~ shell
+component install ansata-biz/sir-trevor-responsive-filemanager
+~~~
+
 1. Install and configure [Responsive Filemanager](http://www.responsivefilemanager.com/) according 
     to [documentation](http://www.responsivefilemanager.com/#documentation-section).
 
