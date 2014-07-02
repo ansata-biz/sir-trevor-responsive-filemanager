@@ -28,12 +28,14 @@
     this.$inputs.find('input.st-upload-filename').attr('id', input_id);
     return this.$inputs.find('.st-upload-btn').on('click', (function(_this) {
       return function() {
-        var config;
+        var config, update_input;
+        update_input = function() {
+          return _this.$inputs.find('input.st-upload-filename').trigger('change');
+        };
         config = $.extend({}, _this.upload_options.filemanager, {
           href: _this.upload_options.filemanager.base_url + '?type=1&field_id=' + input_id,
-          afterClose: function() {
-            return _this.$inputs.find('input.st-upload-filename').trigger('change');
-          }
+          afterClose: update_input,
+          onClosed: update_input
         });
         return $.fancybox(config);
       };

@@ -26,10 +26,11 @@ SirTrevor.BlockMixins.Uploadable.initializeUploadable = ->
   input_id = this.blockID + '-fileinput'
   this.$inputs.find('input.st-upload-filename').attr('id', input_id)
   this.$inputs.find('.st-upload-btn').on 'click', =>
+    update_input = => this.$inputs.find('input.st-upload-filename').trigger('change')
     config = $.extend({}, this.upload_options.filemanager, {
       href: this.upload_options.filemanager.base_url + '?type=1&field_id='+input_id
-      afterClose: =>
-        this.$inputs.find('input.st-upload-filename').trigger('change')
+      afterClose: update_input
+      onClosed: update_input
     })
     $.fancybox config
 
